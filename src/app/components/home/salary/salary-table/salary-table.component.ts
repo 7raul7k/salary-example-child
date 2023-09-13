@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Salary} from "../../models/Salary";
 
 @Component({
@@ -10,4 +10,18 @@ export class SalaryTableComponent {
 
   @Input() employes : Salary[] = [];
 
+  @Output() deleteEmployee = new EventEmitter<{name:string}>();
+    constructor() { }
+
+    ngOnInit() {
+
+    }
+
+    onDeleteEmployee(name: string){
+      this.employes.forEach((employee,index)=>{
+            if(employee.name === name){
+                this.employes.splice(index,1);
+            }
+      });
+    }
 }

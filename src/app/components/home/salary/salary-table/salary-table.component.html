@@ -25,8 +25,8 @@
       <td>{{employee.amount}}</td>
       <td>{{employee.total}}</td>
       <td>
-        <button class="btn btn-primary" >Edit</button>
-        <button class="btn btn-danger" >Delete</button>
+
+        <button class="btn btn-danger" (click)="onDeleteEmployee(employee.name)" >Delete</button>
       </td>
     </tr>
     </tbody>

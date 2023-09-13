@@ -18,4 +18,11 @@ export class SalaryComponent  implements OnInit{
     this.employes.push(salary);
   }
 
+    handleDeleteEmployee(name: any){
+    this.employes.forEach((employee,index)=>{
+        if(employee.name === name){
+            this.employes.splice(index,1);
+        }
+    });
+    }
 }
