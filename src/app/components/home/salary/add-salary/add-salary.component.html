@@ -5,31 +5,31 @@
 
     <section class="first-section">
       <label for="name">Name</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" [(ngModel)]="name">
 
       <label for="contact">Contact No</label>
-      <input type="number" name="contact" id="contact">
+      <input type="number" name="contact" id="contact" [(ngModel)]="contact">
 
       <label for="date">Date</label>
-      <input type="date" name="date" id="date">
+      <input type="date" name="date" id="date" [(ngModel)]="date">
 
       <label for="present">Present Days</label>
-      <input type="number" name="present" id="present">
+      <input type="number" name="present" id="present" [(ngModel)]="presentDays">
 
       <button type="submit" class="reset-button">reset</button>
     </section>
 
     <section class="sec-section">
-      <label for="ad">Ad Total</label>
-      <input type="number" name="ad" id="ad">
+      <label for="ad" >Ad Total</label>
+      <input type="number" name="ad" id="ad" [(ngModel)]="adTotal">
 
       <label for="amount">Amount</label>
-      <input type="number" name="amount" id="amount">
+      <input type="number" name="amount" id="amount" [(ngModel)]="amount">
 
       <label for="total">Total</label>
-      <input type="number" name="total" id="total">
+      <input type="number" name="total" id="total" [(ngModel)]="total">
 
-      <button type="submit" class="save-button">Save Employee</button>
+      <button type="submit" class="save-button" (click)="onAddSalary()">Save Employee</button>
     </section>
   </form>
 </div>

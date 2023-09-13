@@ -14,4 +14,8 @@ export class SalaryComponent  implements OnInit{
   ngOnInit() {
   }
 
+  handleAddSalary(salary: any){
+    this.employes.push(salary);
+  }
+
 }

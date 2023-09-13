@@ -1,4 +1,4 @@
 <div class="salary-portal">
   <app-salary-table [employes] = employes></app-salary-table>
-  <app-add-salary></app-add-salary>
+  <app-add-salary (addSalary)="handleAddSalary($event)"></app-add-salary>
 </div>
