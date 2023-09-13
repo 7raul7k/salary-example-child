@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Salary} from "../../models/Salary";
 
 @Component({
   selector: 'app-salary-table',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./salary-table.component.css']
 })
 export class SalaryTableComponent {
+
+  @Input() employes : Salary[] = [];
 
 }

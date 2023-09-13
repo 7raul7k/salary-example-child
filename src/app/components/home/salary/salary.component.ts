@@ -8,6 +8,7 @@ import {Salary} from "../models/Salary";
 })
 export class SalaryComponent  implements OnInit{
 
+  @Input() employes : Salary[] = [];
   constructor() { }
 
   ngOnInit() {
