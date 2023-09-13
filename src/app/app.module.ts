@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { SalaryComponent } from './components/home/salary/salary.component';
 import { SalaryTableComponent } from './components/home/salary/salary-table/salary-table.component';
 import { AddSalaryComponent } from './components/home/salary/add-salary/add-salary.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { AddSalaryComponent } from './components/home/salary/add-salary/add-sala
     SalaryTableComponent,
     AddSalaryComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -16,35 +16,18 @@
     </thead>
     <tbody>
 
-    <tr>
-      <th>pallavi</th>
-      <th>1234567890</th>
-      <th>12/12/2020</th>
-      <th>30</th>
-      <th>30</th>
-      <th>30000</th>
-      <th>239103</th>
-      <th><button type="submit" class="delete-button">Delete</button></th>
-    </tr>
-    <tr>
-      <th>shubham</th>
-      <th>1234567890</th>
-      <th>12/12/2020</th>
-      <th>30</th>
-      <th>30</th>
-      <th>30000</th>
-      <th>239103</th>
-      <th><button type="submit"  class="delete-button">Delete</button></th>
-    </tr>
-    <tr>
-      <th>shubham</th>
-      <th>1234567890</th>
-      <th>12/12/2020</th>
-      <th>30</th>
-      <th>30</th>
-      <th>30000</th>
-      <th>239103</th>
-      <th><button type="submit" class="delete-button">Delete</button></th>
+    <tr *ngFor="let employee of employes">
+      <td>{{employee.name}}</td>
+      <td>{{employee.contactNo}}</td>
+      <td>{{employee.date}}</td>
+      <td>{{employee.presentDays}}</td>
+      <td>{{employee.adTotal}}</td>
+      <td>{{employee.amount}}</td>
+      <td>{{employee.total}}</td>
+      <td>
+
+        <button class="btn btn-danger" (click)="onDeleteEmployee(employee.name)" >Delete</button>
+      </td>
     </tr>
     </tbody>
   </table>
